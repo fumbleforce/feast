@@ -1,0 +1,33 @@
+<h2>Show Dinner</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @dinner.name %>
+  </li>
+
+  <li>
+    <strong>Difficulty:</strong>
+    <%= @dinner.difficulty %>
+  </li>
+
+  <li>
+    <strong>Time:</strong>
+    <%= @dinner.time %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @dinner.description %>
+  </li>
+
+  <li>
+    <strong>Recipe:</strong>
+    <%= @dinner.recipe %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: dinner_path(@conn, :edit, @dinner) %></span>
+<span><%= link "Back", to: dinner_path(@conn, :index) %></span>

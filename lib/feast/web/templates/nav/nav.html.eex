@@ -1,0 +1,18 @@
+<div class="ui fluid big menu borderless inverted green marginless col">
+  <%= link to: dash_path(@conn, :index),
+    class: "item header"
+    do %>
+    <i class="food icon"></i> Feast
+  <%= end %>
+
+  <div class="menu right">
+    <div class="item header">
+      Logged in as: <%= current_user(@conn).name %>
+    </div>
+    <%= link "Log out",
+        class: "item link",
+        to: session_path(@conn, :delete, :delete),
+        method: :delete
+    %>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.segment:not(.raised) {
+  box-shadow: none;
+  border-radius: 0;
+}

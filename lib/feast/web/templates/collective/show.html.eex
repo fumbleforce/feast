@@ -1,0 +1,18 @@
+<h2>Show Collective</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @collective.name %>
+  </li>
+
+  <li>
+    <strong>Members:</strong>
+    <%= @collective.members %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: collective_path(@conn, :edit, @collective) %></span>
+<span><%= link "Back", to: collective_path(@conn, :index) %></span>

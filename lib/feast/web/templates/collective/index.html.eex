@@ -1,0 +1,28 @@
+<h2>Listing Collectives</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Members</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for collective <- @collectives do %>
+    <tr>
+      <td><%= collective.name %></td>
+      <td><%= collective.members %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: collective_path(@conn, :show, collective), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: collective_path(@conn, :edit, collective), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: collective_path(@conn, :delete, collective), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Collective", to: collective_path(@conn, :new) %></span>

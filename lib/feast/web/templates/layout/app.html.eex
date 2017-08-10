@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>My Personal Finance</title>
+    <script>
+      // Wait for jQuery to load
+      function defer(method) {
+        if (window.jQuery) {
+          method();
+        } else {
+          setTimeout(function() { defer(method) }, 50);
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  </head>
+
+  <body>
+    <div class="app layout">
+      <div class="topbar ui inverted green segment marginless">
+        <div class="ui container marginless">
+          <%= render Feast.Web.NavView, "nav.html", conn: @conn %>
+        </div>
+      </div>
+
+      <main class="main">
+        <div class="alert-list">
+          <p class="ui inverted blue segment alert bottom" role="alert"><%= get_flash(@conn, :info) %></p>
+          <p class="ui inverted red segment alert bottom" role="alert"><%= get_flash(@conn, :error) %></p>
+        </div>
+
+        <div class="ui container">
+          <%= render @view_module, @view_template, assigns %>
+        </div>
+      </main>
+
+    </div>
+
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.menu,
+.ui.vertical.menu {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+
+  .item {
+    border-radius: 0;
+  }
+}
+
+.ui.menu {
+  position: relative;
+
+  .bottom.menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}

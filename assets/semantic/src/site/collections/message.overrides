@@ -1,0 +1,13 @@
+/*******************************
+        Site Overrides
+*******************************/
+
+.ui.message {
+  padding: 1em 0.5em;
+  background: transparent !important;
+  box-shadow: none !important;
+
+  &:empty {
+    display: none;
+  }
+}

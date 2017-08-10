@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>My Personal Finance</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  </head>
+
+  <body>
+    <div class="basic layout ui inverted green segment snug marginless">
+      <main class="main ui segment borderless marginless">
+        <div class="alert-list">
+          <p class="ui inverted blue segment alert bottom" role="alert"><%= get_flash(@conn, :info) %></p>
+          <p class="ui inverted red segment alert bottom" role="alert"><%= get_flash(@conn, :error) %></p>
+        </div>
+
+        <%= render @view_module, @view_template, assigns %>
+      </main>
+
+    </div>
+
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

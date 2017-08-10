@@ -1,0 +1,15 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.input {
+  max-width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(34,36,38,.15);
+  position: relative;
+
+  input {
+    border: none;
+    background: transparent;
+  }
+}

@@ -1,0 +1,17 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.header {
+  font-family: 'Raleway', sans-serif !important;
+  letter-spacing: 1px;
+  font-weight: normal;
+
+  .content.right.floated {
+    float: right;
+  }
+
+  &.fluid {
+    width: 100%;
+  }
+}

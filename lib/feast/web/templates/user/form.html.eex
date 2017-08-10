@@ -1,0 +1,22 @@
+<%= form_for @changeset,
+    @action,
+    [class: "ui #{@changeset.action && "error" || ""} form"],
+    fn f -> %>
+  <%= form_errors @changeset %>
+
+  <%= input f, :name %>
+  <%= input f, :email %>
+  <%= input f, :password %>
+  <%= input f, :password_confirmation %>
+
+  <div class="ui hidden divider"></div>
+
+  <div class="field">
+    <div class="ui center aligned basic segment">
+      <%= submit "Register", class: "ui big green submit button" %>
+      <%= link "Log in",
+        class: "ui big button",
+        to: session_path(@conn, :new) %>
+    </div>
+  </div>
+<% end %>

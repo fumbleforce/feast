@@ -1,0 +1,6 @@
+<h2>New Collective</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: collective_path(@conn, :create) %>
+
+<span><%= link "Back", to: collective_path(@conn, :index) %></span>

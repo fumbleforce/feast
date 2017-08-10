@@ -1,0 +1,14 @@
+<div id="user-new" class="ui basic segment">
+  <h2 class="ui center aligned green header">
+    <i class="food icon"></i> Registration
+  </h2>
+
+  <div class="ui very padded basic segment">
+    <%= render "form.html",
+        changeset: @changeset,
+        action: user_path(@conn, :create),
+        conn: @conn %>
+  </div>
+</div>
+
+

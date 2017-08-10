@@ -1,0 +1,16 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+.ui.cards {
+  >.card {
+    border-radius: 0;
+    border: none;
+
+    >.content {
+      >.header:not(.ui) {
+        font-weight: normal;
+      }
+    }
+  }
+}

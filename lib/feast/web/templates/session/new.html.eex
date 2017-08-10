@@ -1,0 +1,32 @@
+<div id="session-new">
+  <h2 class="ui green center aligned header">
+    <i class="food icon"></i> Login
+  </h2>
+
+  <div class="ui basic very padded segment">
+    <%= form_for @changeset, session_path(@conn, :create), [class: "ui form"], fn f -> %>
+      <%= if f.errors != [] do %>
+        <div class="ui danger message">
+          <p>Oops, something went wrong! Please check the errors below:</p>
+          <ul>
+            <%= for {attr, message} <- f.errors do %>
+              <li><%= humanize(attr) %> <%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <%= input f, :email %>
+      <%= input f, :password %>
+
+      <div class="ui center aligned basic segment">
+        <%= submit "Log in", class: "ui submit big green button" %>
+        <%= link "Register",
+          class: "ui big button",
+          to: user_path(@conn, :new) %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+</div>

@@ -1,0 +1,6 @@
+<h2>Edit Collective</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: collective_path(@conn, :update, @collective) %>
+
+<span><%= link "Back", to: collective_path(@conn, :index) %></span>

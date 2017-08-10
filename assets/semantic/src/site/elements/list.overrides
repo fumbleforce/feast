@@ -1,0 +1,34 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+.ui.list {
+  &.padded {
+    .item {
+      padding: 1em;
+    }
+  }
+
+  a.item,
+  a.item.active {
+    color: text !important;
+  }
+
+  .item {
+    .header {
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+  }
+
+
+  .item.label {
+    padding: 1em;
+    margin: 0 0 1em 0;
+    background: rgba(0,0,0,0.05);
+
+    &:hover {
+      background: rgba(0,0,0,0.15);
+    }
+  }
+}

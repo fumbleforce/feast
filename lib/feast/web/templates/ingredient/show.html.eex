@@ -1,0 +1,23 @@
+<h2>Show Ingredient</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @ingredient.name %>
+  </li>
+
+  <li>
+    <strong>Price:</strong>
+    <%= @ingredient.price %>
+  </li>
+
+  <li>
+    <strong>Unit:</strong>
+    <%= @ingredient.unit %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: ingredient_path(@conn, :edit, @ingredient) %></span>
+<span><%= link "Back", to: ingredient_path(@conn, :index) %></span>

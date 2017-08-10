@@ -1,0 +1,22 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+table.ui.table {
+  thead {
+    tr {
+      th:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td:last-child {
+        text-align: right;
+      }
+    }
+  }
+}
+
